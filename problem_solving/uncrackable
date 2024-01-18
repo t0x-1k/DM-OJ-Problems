@@ -1,0 +1,20 @@
+import string
+
+def uncrackable():
+    password = input()
+
+    lower = sum(char in string.ascii_lowercase for char in password)
+    upper = sum(char in string.ascii_uppercase for char in password)
+    digit = sum(char in string.digits for char in password)
+    
+    
+    if lower >= 3 and upper >= 2 and digit >= 1:
+        print("Valid")
+    else:
+        print("Invalid")
+                
+    
+
+    
+uncrackable()        
+

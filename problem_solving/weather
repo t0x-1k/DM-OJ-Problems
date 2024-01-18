@@ -1,0 +1,7 @@
+def weather():
+    celsius = int(input())
+    fahrenheit = (celsius * 9/5) + 32
+
+    print(fahrenheit)
+
+weather()

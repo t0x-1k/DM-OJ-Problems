@@ -1,0 +1,21 @@
+def winning_score():
+   apples_3 = int(input())
+   apples_2 = int(input())
+   apples_1 = int(input())
+
+   bananas_3 = int(input())
+   bananas_2 = int(input())
+   bananas_1 = int(input())
+
+
+   apples_score = apples_3 * 3 + apples_2 * 2 + apples_1 * 1
+   bananas_score = bananas_3 * 3 + bananas_2 * 2 + bananas_1 *1
+
+   if apples_score > bananas_score:
+      print("A")
+   elif bananas_score > apples_score:
+      print("B")
+   else:
+      print("T")
+
+winning_score()

@@ -1,0 +1,69 @@
+def calorie_counter():
+    burger = int(input())
+    side = int(input())
+    drink = int(input())
+    dessert = int(input())
+
+    burger1 = 461
+    burger2 = 431
+    burger3 = 420
+    burger4 = 0
+
+    side1 = 100
+    side2 = 57
+    side3 = 70
+    side4 = 0
+
+    drink1 = 130
+    drink2 = 160
+    drink3 = 118
+    drink4 = 0
+
+    dessert1 = 167
+    dessert2 = 266
+    dessert3 = 75
+    dessert4 = 0
+
+    if burger == 1:
+        burger = burger1
+    elif burger == 2:
+        burger = burger2
+    elif burger == 3:
+        burger = burger3
+    elif burger == 4:
+        burger = burger4
+        
+    
+    if side == 1:
+        side = side1
+    elif side == 2:
+        side = side2
+    elif side == 3:
+        side = side3
+    elif side == 4:
+        side = side4
+        
+    
+    if drink == 1:
+        drink = drink1
+    elif drink == 2:
+        drink = drink2
+    elif drink == 3:
+        drink = drink3
+    elif drink == 4:
+        drink = drink4
+    
+    if dessert == 1:
+        dessert = dessert1
+    elif dessert == 2:
+        dessert = dessert2
+    elif dessert == 3:
+        dessert = dessert3
+    elif dessert == 4:
+        dessert = dessert4
+
+    total_calories = burger + side + drink + dessert
+    
+    print(f"Your total Calorie count is {total_calories}.")
+
+calorie_counter()

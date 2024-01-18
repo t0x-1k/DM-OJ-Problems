@@ -1,0 +1,10 @@
+def vol_cone():
+    pi = 3.14159265359
+    r = int(input())
+    h = int(input())
+    x = pow(r,2)
+
+    vol = pi * (x * h) / 3
+    print("%.2f" % vol)
+    
+vol_cone()

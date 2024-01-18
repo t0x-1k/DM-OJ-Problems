@@ -1,0 +1,12 @@
+
+def honest_work():
+    p = int(input())
+    b = int(input())
+    d = int(input())
+        # remember simple order of operations and stop over-thinking it!!!
+    output = (p // b) * d + (p % b)
+    
+
+    print(output) 
+
+honest_work()

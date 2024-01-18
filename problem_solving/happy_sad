@@ -1,0 +1,20 @@
+def happy_sad():
+    answer = str(input())
+
+    happy = int(answer.count(':-)')) 
+    sad = int(answer.count(':-('))
+
+    if happy > sad:
+        print("happy")
+    elif happy < sad:
+        print("sad")
+    elif (sad == happy) and (happy == sad):
+        print("unsure")
+    elif (sad != sad) and (happy != happy):
+        print("none")
+
+happy_sad()
+
+
+
+

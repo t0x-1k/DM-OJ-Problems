@@ -1,0 +1,32 @@
+def baker():
+
+    for test_cases in range(10):
+        listing = input().split()
+        franchisees = int(listing[0])
+        days = int(listing[1])
+
+        grid = []
+
+        for i in range(days):
+            row = input().split()
+            for j in range(franchisees):
+                row[j] = int(row[j])
+            grid.append(row)
+
+        bonus = 0
+
+        for row in grid:
+            total = sum(row)
+            if total % 13 == 0:
+                bonus += total // 13
+
+        for column_index in range(franchisees):
+            total = 0
+            for row_index in range(days):
+                total += grid[row_index][column_index]
+            if total % 13 == 0:
+                bonus += total // 13
+
+        print(bonus)
+
+baker()

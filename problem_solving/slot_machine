@@ -1,0 +1,32 @@
+def slot_machine():
+    coins = int(input())
+
+    first_machine_times_played = int(input()) #before player arrives
+    second_machine_times_played = int(input())
+    third_machine_times_played = int(input())
+
+    plays = 0
+
+    while coins >= 1:
+        machine = plays % 3
+        coins -= 1
+
+        if machine == 0:
+            first_machine_times_played += 1
+            if first_machine_times_played % 35 == 0:
+                coins += 30
+        elif machine == 1:
+            second_machine_times_played += 1
+            if second_machine_times_played % 100 == 0:
+                coins += 60
+        elif machine == 2:
+            third_machine_times_played += 1
+            if third_machine_times_played % 10 == 0:
+                coins += 9
+        
+        plays += 1
+    
+    print(f"Martha plays {plays} times before going broke.")
+
+slot_machine()
+000

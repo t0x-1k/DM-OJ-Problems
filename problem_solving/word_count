@@ -1,0 +1,6 @@
+def word_count():
+    count = input()
+    words = len(count.split())
+    print(words)
+ 
+word_count()

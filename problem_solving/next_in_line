@@ -1,0 +1,9 @@
+def next_in_line():
+    y = int(input())
+    m = int(input())
+
+    sum = m - y + m
+
+    print(sum)
+
+next_in_line()

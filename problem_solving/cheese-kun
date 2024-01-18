@@ -1,0 +1,14 @@
+def cheese_kun():
+    width = int(input())
+    x_cheese = int(input())
+
+    if (width == 3) and (x_cheese >= 95):
+        m = "absolutely"
+    elif (width == 1) and (x_cheese <= 50):
+        m = "fairly"
+    else:
+         m = "very"
+
+    print(f"C.C. is {m} satisfied with her pizza.")
+
+cheese_kun()

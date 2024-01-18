@@ -1,0 +1,52 @@
+def brunch():
+    # List containing the cost per student for different years
+    cost_per_student = [12, 10, 7, 5]
+
+    # Iterate over 10 test cases
+    for test_cases in range(10):
+        # Read the total cost of the trip from user input
+        cost_of_trip = int(input())
+
+        # Read the proportions of students from each year, split the input into a list
+        proportions = input().split()
+
+        
+        number_of_students = int(input())
+
+        # Convert proportions from string to float for calculation
+        for i in range(len(proportions)):
+            proportions[i] = float(proportions[i])
+
+        
+        year_of_student = []
+
+        # Calculate the number of students for each year based on proportions
+        for proportion in proportions:
+            students = int(number_of_students * proportion)
+            year_of_student.append(students)
+
+        # Calculate the total number of students accounted for in the proportions
+        num_students = sum(year_of_student)
+        # Calculate the number of students not accounted for by the proportions
+        no_students = number_of_students - num_students
+        # Find the year with the most students
+        most_students = max(year_of_student)
+        # Get the index (year) of the most students
+        all_students = year_of_student.index(most_students)
+        # Add the unaccounted students to the year with the most students
+        year_of_student[all_students] = year_of_student[all_students] + no_students
+
+    
+        money_raised = 0
+
+        # Calculate the total money raised by each year's students
+        for i in range(len(year_of_student)):
+            money_raised += year_of_student[i] * cost_per_student[i]
+
+        # Check if the money raised is less than half the cost of the trip
+        if money_raised / 2 < cost_of_trip:
+            print("YES") 
+        else:
+            print("NO") 
+
+brunch()

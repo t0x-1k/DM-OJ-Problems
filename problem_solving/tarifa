@@ -1,0 +1,22 @@
+def tarifa():
+    megabytes = int(input())
+    n = int(input())
+
+    # Initialize a variable to track the excess megabytes accumulated
+    excess_mb = 0
+
+    # Loop over each month to calculate data usage
+    for i in range(n):
+        # Read the number of megabytes used in the current month
+        used_mb = int(input())
+
+        # Calculate the excess (unused) megabytes for the month
+        # and add it to the running total of excess megabytes
+        excess_mb += megabytes - used_mb
+
+    # Print the total megabytes available for the next month
+    # This is the sum of the monthly allocation and any excess megabytes accumulated
+    print(excess_mb + megabytes)
+
+
+tarifa()

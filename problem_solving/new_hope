@@ -1,0 +1,13 @@
+def new_hope():
+  word = "A long time ago in a galaxy far away..."
+  part_word = word.split("far")
+
+  num = int(input())
+  if num != 0:
+    far = ("far, " * (num - 1)) + "far"
+    new_word = part_word[0] + far + part_word[1]
+
+    print(new_word)
+
+   
+new_hope()

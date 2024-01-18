@@ -1,0 +1,11 @@
+def spooky_season():
+    i = "sp"
+    j = "ky"
+    k = int(input())
+    l = "o"
+
+
+
+    print(f"{i}{k * str(l)}{j}")
+
+spooky_season()

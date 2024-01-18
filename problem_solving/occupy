@@ -1,0 +1,20 @@
+def occupy():
+    parking_spaces = int(input())
+    occupied_space = input()
+    empty_space = input()
+
+    # Initialize a variable 'total_space' to count the number of spaces that are occupied
+    total_spaces = 0
+
+    # Iterate over each character in the 'occupied_space' string
+    for i in range(len(occupied_space)):
+        # Check if both 'occupied_space' and 'empty_space' at the same index have a 'C'
+        # This implies a space is counted as occupied in both strings
+        if occupied_space[i] == "C" and empty_space[i] == "C":
+            space += 1  # Increment the count of such spaces
+
+    # Print the total count of spaces that are occupied in both strings
+    print(total_spaces)
+
+# Call the occupy function to execute it
+occupy()

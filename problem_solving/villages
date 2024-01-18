@@ -1,0 +1,27 @@
+def villages():
+    n_villages = int(input())
+
+    village_positions = []
+
+    for i in range(n_villages):
+        village_positions.append(int(input()))
+    
+    village_positions.sort()
+
+    left_hood = (village_positions[1] - village_positions[0]) / 2
+    right_hood =(village_positions[2] - village_positions[1]) / 2
+
+    min_size = left_hood + right_hood
+
+
+    for i in range(2, n_villages -1):
+         left_hood = (village_positions[i] - village_positions[i - 1]) / 2
+         right_hood =(village_positions[i + 1] - village_positions[i]) / 2
+
+         size = left_hood + right_hood
+         if size < min_size:
+             min_size = size
+
+    print(min_size)
+
+villages()

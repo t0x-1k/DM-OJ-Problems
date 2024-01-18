@@ -1,0 +1,49 @@
+CARDS = 52
+
+def high_card(lst):
+    return not any(card in lst for card in ["jack", "queen", "king", "ace"])
+
+deck = []
+
+for i in range(CARDS):
+    deck.append(input())
+
+score_a = 0 
+score_b = 0
+player = "A"
+
+CARD_POINTS = {
+    "jack": (1, 1),     #dict with key card in lst,  
+    "queen": (2, 2),    #value being tuple that represents point value
+    "king": (3, 3),     #and number of cards needed after to gain points
+    "ace": (4, 4)
+}
+
+for i in range(CARDS):
+    card = deck[i]
+    points = 0
+    remaining = CARDS - i - 1
+
+    if card in CARD_POINTS:
+        point_value, cards_needed = CARD_POINTS[card]
+        if remaining >= cards_needed and high_card(deck[i+1:i+cards_needed+1]):
+            points = point_value
+
+    # Now, 'points' contains the correct point value for the current card
+    # You can use 'points' as needed here
+
+
+    if points > 0:
+        print(f"Player {player} scores {points} point(s).")
+
+    if player == "A":
+        score_a += points
+        player = "B"
+    else:
+        score_b += points
+        player = "A"
+
+print(f"Player A: {score_a} point(s).")
+print(f"Player B: {score_b} point(s).")
+
+high_card()

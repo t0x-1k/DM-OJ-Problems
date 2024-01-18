@@ -1,0 +1,23 @@
+def tarifa2():
+    # Read the monthly data allocation in megabytes from user input
+    megabytes = int(input())
+
+    # Read the number of months to track data usage
+    number_of_months = int(input())
+
+    # Calculate the total megabytes for the entire period, including the next month
+    total_megabytes = megabytes * (number_of_months + 1)
+
+    # Iterate over the number of months to account for used data
+    for i in range(number_of_months):
+        # Read the amount of data used in each month
+        used_megabytes = int(input())
+
+        # Subtract the used data from the total available data
+        total_megabytes = total_megabytes - used_megabytes
+
+    # Print the remaining data available at the end of the period
+    print(total_megabytes)
+
+
+tarifa2()

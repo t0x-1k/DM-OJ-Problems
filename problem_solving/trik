@@ -1,0 +1,22 @@
+def trik():
+    swaps = input("")
+
+    ball = 1
+
+    for swap in swaps:
+        if swap == "A" and ball == 1:
+            ball = 2
+        elif swap == "A" and ball == 2:
+            ball = 1
+        elif swap == "B" and ball == 2:
+            ball = 3
+        elif swap == "B" and ball == 3:
+            ball = 2
+        elif swap == "C" and ball == 1:
+            ball = 3
+        elif swap == "C" and ball == 3:
+            ball = 1
+
+    print(ball)
+
+trik()

@@ -1,0 +1,20 @@
+def middle_bear():
+    baby_bear = int(input())
+    mama_bear = int(input())
+    papa_bear = int(input())
+    
+    bowls = [baby_bear, mama_bear, papa_bear]
+    #sorting list
+    bowls.sort()
+    #locating middle number by dividing the length of bowls by 2 and rounding down using floor // division
+    mid_bowl = len(bowls) // 2
+    #finding even or odd
+    if len(bowls) % 2 == 0:
+        middle_bowl = bowls[mid_bowl - 1]
+    else:
+        middle_bowl = bowls[mid_bowl]
+
+
+    print(middle_bowl)
+
+middle_bear()
